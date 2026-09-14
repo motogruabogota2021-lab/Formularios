@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Servicio Básico</title>
+	<link rel="icon" type="image/x-icon" href="MGB.ico">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.css?v=2026.09.14">
 </head>
 <body>
 <div class="container">
@@ -109,6 +110,18 @@
                 </div>
             </div>
         </fieldset>
+        <fieldset>
+            <legend>Tipo de Resultado</legend>
+            <div class="grid-inputs">
+                <div class="input-group checkbox-group">
+                    <label><input type="radio" name="tipoResultado" value="cotizacion" checked onchange="calcularTodo()"> Cotización</label>
+                </div>
+                <div class="input-group checkbox-group">
+                    <label><input type="radio" name="tipoResultado" value="servicio" onchange="calcularTodo()"> Servicio prestado</label>
+                </div>
+            </div>
+        </fieldset>
+
         <fieldset>
             <legend>Recargos Porcentuales</legend>
             <div class="grid-inputs">
@@ -254,6 +267,7 @@
                 <strong>Cambio:</strong>
                 <input type="text" id="resDiferencia" readonly>
             </div>
+            <div class="nota-recibo" id="notaFinal" style="font-size: 0.85em; text-align: center; margin-top: 10px;"></div>
             </div>
         </div>
 
@@ -297,6 +311,6 @@
     </form>
 </div>
 
-<script src="const.js"></script>
+<script src="const.js?v=2026.09.14"></script>
 </body>
 </html>
