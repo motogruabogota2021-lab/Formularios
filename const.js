@@ -409,6 +409,11 @@ if (ES_BASICO) {
             conductor: conductorFinal,
             movil: movilFinal
         };
+
+        const tipoResultado = document.querySelector('input[name="tipoResultado"]:checked').value;
+        document.getElementById('notaFinal').textContent = tipoResultado === 'cotizacion'
+            ? 'Tarifa sujeta a modificación por imprevistos durante la operación.'
+            : 'Muchas gracias por elegirnos';
     }
 
     function nuevoServicio() {
@@ -680,6 +685,11 @@ if (ES_CORPORATIVO) {
             cantidadNodos: resumenNodos.length,
             nodos: resumenNodos.map(n => n.nombre + ' (Llegada ' + n.llegada + ', Espera ' + n.espera + (n.km ? ', Km ' + n.km : '') + ')').join(' | ')
         };
+
+        const tipoResultado = document.querySelector('input[name="tipoResultado"]:checked').value;
+        document.getElementById('notaFinal').textContent = tipoResultado === 'cotizacion'
+            ? 'Tarifa sujeta a modificación por imprevistos durante la operación.'
+            : 'Muchas gracias por elegirnos';
     }
 
     function nuevoServicio() {
